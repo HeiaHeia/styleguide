@@ -132,9 +132,10 @@
     end
     ```
 
-* Use [YARD](http://yardoc.org/) and its conventions for API documentation.  Don't put an
-  empty line between the comment block and the `def`.
-* Keep lines fewer than 80 characters.
+* Use [YARD](http://yardoc.org/) and its conventions for API documentation.
+  Don't put an empty line between the comment block and the `def`.
+* Keep lines fewer than 80 characters. It is possible to use 100 characters
+  in special cases only.
 * Avoid trailing whitespace.
 
 ## Syntax
@@ -313,6 +314,27 @@
       # body omitted
     end
     ```
+* Omit parentheses around parameters for methods that are part of an
+  internal DSL (e.g. Rake, Rails, RSpec), methods that are with
+  "keyword" status in Ruby (e.g. `attr_reader`, `puts`) and attribute
+  access methods. Use parentheses around the arguments of all other
+  method invocations.
+
+  ```Ruby
+  class Person
+    attr_reader :name, :age
+
+    # omitted
+  end
+
+  temperance = Person.new('Temperance', 30)
+  temperance.name
+
+  puts temperance.age
+
+  x = Math.sin(y)
+  array.delete(e)
+  ```
 
 * Prefer `{...}` over `do...end` for single-line blocks.  Avoid using
   `{...}` for multi-line blocks (multiline chaining is always
