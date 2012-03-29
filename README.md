@@ -1,4 +1,4 @@
-# Collection of guides
+Collection of guides and recommendations on how to write code:
 
 - Ruby
 - Git commit message
