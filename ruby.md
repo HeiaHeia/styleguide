@@ -135,7 +135,7 @@
 * Use [YARD](http://yardoc.org/) and its conventions for API documentation.
   Don't put an empty line between the comment block and the `def`.
 * Keep lines fewer than 80 characters. It is possible to use 100 characters
-  in special cases only.
+  for special cases only.
 * Avoid trailing whitespace.
 
 ## Syntax
