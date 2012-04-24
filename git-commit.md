@@ -22,5 +22,7 @@ Further paragraphs come after blank lines.
 
 - Use a hanging indent
 
+If commit fixes some issue, its message has to contain issue_id and
+text description from issue tracker (Pivotal Tracker/Redmine).
 
 Based on [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
